@@ -8,6 +8,12 @@
     <span class="item-title">{{ T "lastMod" }}</span>
     <span class="item-content">{{ .Lastmod.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}</span>
   </p>
+  {{ if $.Site.Params.enablePermalinks -}}
+  <p class="copyright-item">
+    <span class="item-title">{{ T "permalink" }}</span>
+    <span class="item-content">{{ .Permalink }}</span>
+  </p>
+  {{- end }}
   {{ if $.Site.Params.linkToMarkDown -}}
     {{ with $.OutputFormats.Get "markdown" -}}
     <p class="copyright-item">

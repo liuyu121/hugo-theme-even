@@ -82,6 +82,9 @@ seeMarkDown:
 license:
   other: "许可协议"
 
+permalink:
+  other: "本文链接"
+
 # ===== counter =====
 archiveCounter:
   one: "共计 {{ .Count }} 篇文章"

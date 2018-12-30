@@ -82,6 +82,9 @@ seeMarkDown:
 license:
   other: "License"
 
+permalink:
+  other: "Permalink to this page"
+
 # ===== counter =====
 archiveCounter:
   one: "{{ .Count }} Post In Total"

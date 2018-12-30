@@ -82,6 +82,9 @@ seeMarkDown:
 license:
   other: "Licence"
 
+permalink:
+  other: "WAITING FOR TRANSLATE!"
+
 # ===== counter =====
 archiveCounter:
   one: "{{ .Count }} Articles au total"
