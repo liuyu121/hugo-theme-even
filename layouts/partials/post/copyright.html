@@ -11,17 +11,11 @@
         {{ with .GitInfo }}<a href="{{ $.Site.Params.gitRepo }}/commit/{{ .Hash }}" title="{{ .Subject }}">({{ .AbbreviatedHash }})</a>{{ end }}
     </span>
   </p>
-  {{ if $.Site.Params.enablePermalinks -}}
-  <p class="copyright-item">
-    <span class="item-title">{{ T "permalink" }}</span>
-    <span class="item-content">{{ .Permalink }}</span>
-  </p>
-  {{- end }}
   {{ if $.Site.Params.linkToMarkDown -}}
     {{ with $.OutputFormats.Get "markdown" -}}
     <p class="copyright-item">
-      <span class="item-title">{{ T "markdown" }}</span>
-      <span class="item-content"><a class="link-to-markdown" href="{{ .Permalink }}" target="_blank">{{ T "seeMarkDown" }}</a></span>
+      <span class="item-title">{{ T ".Permalink" }}</span>
+      <span class="item-content"><a class="link-to-markdown" href="{{ .Permalink }}" target="_blank">{{ T ".Permalink" }}</a></span>
     </p>
     {{- end }}
   {{- end }}
@@ -35,6 +29,12 @@
       {{ .Site.Params.contentCopyright | safeHTML }}
     {{- end -}}
     </span>
+  </p>
+  {{- end }}
+  {{ if $.Site.Params.enablePermalinks -}}
+  <p class="copyright-item">
+    <span class="item-title">{{ T "permalinkName" }}</span>
+    <span class="item-content"><a class="link-to-markdown" href="{{ .Permalink }}" target="_blank">{{ T "permalink" }}</a></span>
   </p>
   {{- end }}
 </div>

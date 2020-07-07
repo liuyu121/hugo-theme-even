@@ -85,6 +85,9 @@ license:
 permalink:
   other: "Permalink to this page"
 
+permalinkName:
+  other: "Permalink"
+
 # ===== counter =====
 archiveCounter:
   one: "{{ .Count }} Post In Total"
